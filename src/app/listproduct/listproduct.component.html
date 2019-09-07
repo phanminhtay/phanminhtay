@@ -11,63 +11,27 @@
             <input type="text" class="form-control" style="width:250px">
         </div>
         <div class="col-12">
-        <table class="table" cellspacing="0">
-            <thead>
-                <tr>
-                    <th scope="col" style="width: 258px;"><button class="btn btn-info">Hien image</button></th>
-                    <th scope="col">Product</th>
-                    <th scope="col">Code</th>
-                    <th scope="col">Available</th>
-                    <th scope="col">Price</th>
-                    <th scope="col">5 Star Rating</th>
-                </tr>
-                <tr>
-                    <td scope="col"><img src="/assets/images/choi1.jpg" width="100px" height="50px"
-                            style="margin-left: 30px"></td>
-                    <td scope="col">Leaf Rake</td>
-                    <td scope="col">gdn-0011</td>
-                    <td scope="col">March 19,2016</td>
-                    <td scope="col">$19.95</td>
-                    <td scope="col">&#9733;&#9733;&#9733;</td>
-                </tr>
-                <tr>
-                    <td scope="col"><img src="/assets/images/choi1.jpg" width="100px" height="50px"
-                            style="margin-left: 30px"></td>
-                    <td scope="col">Leaf Rake</td>
-                    <td scope="col">gdn-0011</td>
-                    <td scope="col">March 19,2016</td>
-                    <td scope="col">$19.95</td>
-                    <td scope="col">&#9733;&#9733;&#9733;</td>
-                </tr>
-                <tr>
-                    <td scope="col"><img src="/assets/images/choi1.jpg" width="100px" height="50px"
-                            style="margin-left: 30px"></td>
-                    <td scope="col">Leaf Rake</td>
-                    <td scope="col">gdn-0011</td>
-                    <td scope="col">March 19,2016</td>
-                    <td scope="col">$19.95</td>
-                    <td scope="col">&#9733;&#9733;&#9733;</td>
-                </tr>
-                <tr>
-                    <td scope="col"><img src="/assets/images/choi1.jpg" width="100px" height="50px"
-                            style="margin-left: 30px"></td>
-                    <td scope="col">Leaf Rake</td>
-                    <td scope="col">gdn-0011</td>
-                    <td scope="col">March 19,2016</td>
-                    <td scope="col">$19.95</td>
-                    <td scope="col">&#9733;&#9733;&#9733;</td>
-                </tr>
-                <tr>
-                    <td scope="col"><img src="/assets/images/choi1.jpg" width="100px" height="50px"
-                            style="margin-left: 30px"></td>
-                    <td scope="col">Leaf Rake</td>
-                    <td scope="col">gdn-0011</td>
-                    <td scope="col">March 19,2016</td>
-                    <td scope="col">$19.95</td>
-                    <td scope="col">&#9733;&#9733;&#9733;</td>
-                </tr>
-            </thead>
-        </table>
-    </div>
+            <table class="table" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th scope="col" style="width: 258px;"><button class="btn btn-info" (click)='anhien()'>Hien image</button></th>
+                        <th scope="col">Product</th>
+                        <th scope="col">Code</th>
+                        <th scope="col">Available</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">5 Star Rating</th>
+                    </tr>
+                    <tr *ngFor='let p of listproduct'>
+                        <td scope="col"><img  *ngIf='isShow' src="/assets/images/{{p.imageUrl}}" width="100px" height="50px"
+                                style="margin-left: 30px"></td>
+                        <td scope="col">{{p.productId}}</td>
+                        <td scope="col">{{p.productName}}</td>
+                        <td scope="col">{{p.productCode}}</td>
+                        <td scope="col">{{p.releaseDate}}</td>
+                        <td scope="col"><app-rating></app-rating></td>
+                    </tr>
+                </thead>
+            </table>
+        </div>
     </div>
 </div>
