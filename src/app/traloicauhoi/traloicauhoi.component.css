@@ -1,0 +1,19 @@
+.tracnghiem{
+    margin-left: 10%;
+}
+.chuyentrang button {
+    margin: 1%;
+    background-color: rgb(128, 16, 35);
+    border: none;
+    color: white;
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .chuyentrang button:hover {
+    background-color: rgb(15, 74, 250);
+  }
+  .chuyentrang{
+      margin-left: 38%;
+      margin-top: 1%;
+  }

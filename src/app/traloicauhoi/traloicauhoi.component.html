@@ -1,0 +1,21 @@
+<div class="tracnghiem" *ngFor="let product of cauhoi">
+
+   <p>{{product.Text}}</p>
+   <p>
+      <input id="choice1A" value="A" name="choice1" type="radio"><label id="C1A">{{product.Answers[0].Text}}</label><br>
+
+      <input id="choice1B" value="B" name="choice1" type="radio"><label id="C1B">{{product.Answers[1].Text}}</label><br>
+
+      <input id="choice1C" value="C" name="choice1" type="radio"><label id="C1C">{{product.Answers[2].Text}}</label><br>
+
+      <input id="choice1D" value="D" name="choice1" type="radio"><label id="C1D">{{product.Answers[3].Text}}</label>
+
+   </p>
+   <input type="submit" class="btn btn-primary" value="xác nhận câu trả lời">
+</div>
+<div class="chuyentrang">
+      <button class="btn"><i class="fa fa-angle-double-left fa-2x"></i></button>
+      <button class="btn"><i class="fa fa-angle-double-up fa-2x"></i></button>
+      <button class="btn"><i class="fa fa-angle-double-down fa-2x"></i></button>
+      <button class="btn"><i class="fa fa-angle-double-right fa-2x"></i></button>
+   </div>
