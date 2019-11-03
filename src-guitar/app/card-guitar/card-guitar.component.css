@@ -1,0 +1,22 @@
+table{
+    border-top: 0px solid #dee2e6 !important;
+}
+.returnto li{
+    list-style: none;
+}
+.table{
+    width: 80%;
+}
+.blockboder th{
+    border: none;
+}
+.blockboder td{
+    border: none;
+}
+table th{
+    text-align: right;
+}
+
+table td{
+    text-align: right;
+}

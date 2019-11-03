@@ -1,0 +1,57 @@
+<div class="row">
+    <div class="col-3">
+        <nav class="nav flex-column">
+            <ul>
+                <a href="#" style="color: sandybrown; text-decoration: none;">Links</a>
+                <ul style="list-style: none; margin-left: -15%;">
+                    <li><u><a href="#">View Cart</a></u></li>
+                    <li><u><a href="#">Login/Register</a></u></li>
+                    <li><u><a href="#">Home</a></u></li>
+                </ul>
+            </ul>
+        </nav>
+        <nav class="nav flex-column">
+            <ul>
+                <a href="#" style="color: sandybrown; text-decoration: none;">Categories</a>
+                <ul style="list-style: none; margin-left: -15%;">
+                    <li><u><a href="#">Guitars</a></u></li>
+                    <li><u><a href="#">Basses</a></u></li>
+                    <li><u><a href="#">Drums</a></u></li>
+                </ul>
+            </ul>
+        </nav>
+        <nav class="nav flex-column">
+            <ul>
+                <a href="#" style="color: sandybrown; text-decoration: none;">Temp Link</a>
+                <ul style="list-style: none; margin-left: -15%;">
+                    <li><u><a href="#">Admin</a></u></li>
+                </ul>
+            </ul>
+        </nav>
+    </div>
+    <div class="col-9">
+        <div class="container">
+            <h3 style="text-align: left; font-size: 40px; color: red;" >shop guitar</h3>
+            <div class="row">
+                <div class="col-2" style="margin-top: 2%; margin-left: -10%;">
+                    <img src="assets/images/{{product.imagesurl}}" alt="">
+                </div>
+                <div class="col-2"></div>
+                <div class="col-8" style="margin-top: 2%; margin-left: 5%;">
+                    Name: {{product.productname}} <br>
+                    listPrice: {{product.price | number}}<br>
+                    discount:{{product.discount}}<br>
+                    quantity:
+                    <input type="number">
+                    <button (click)='addToCart(product)'[routerLink]="['/yourcart']">add to cart</button> <br>
+                    <h5>deresiption:</h5>
+                    <p>{{product.description}}</p>
+                    <h6>New features</h6>
+                    <ul>
+                        <li *ngFor='let f of features'> {{f.text}} </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

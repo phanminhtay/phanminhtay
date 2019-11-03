@@ -1,0 +1,31 @@
+img{
+    width: 300px;
+}
+.col-md-5 button{
+    margin-left: 2%;
+}
+ li a{
+ text-decoration: none;
+}
+ul {
+    list-style: none;
+    }
+input{
+    width: 6%;
+    margin-right: 2%;
+}
+.addtocart a{
+    margin-left: 1%;;
+}
+.addtocart li{
+    list-style: none;
+}
+nav {
+    padding: 20px;
+}
+nav ul li {
+    padding: 10px;
+}
+nav a{
+    font-size: 20px;
+}

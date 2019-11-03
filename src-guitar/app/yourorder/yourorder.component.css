@@ -1,0 +1,28 @@
+.mauchu{
+    color: darkgoldenrod;
+}
+li{
+    list-style: none;
+}
+.blockboder th{
+    border: none;
+}
+.blockboder td{
+    border: none;
+}
+table th{
+    text-align: right;
+}
+
+table td{
+    text-align: right;
+}
+nav {
+    padding: 20px;
+}
+nav ul li {
+    padding: 10px;
+}
+nav a{
+    font-size: 20px;
+}

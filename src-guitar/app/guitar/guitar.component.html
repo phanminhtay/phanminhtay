@@ -1,0 +1,60 @@
+<div class="row">
+    <div class="col-3">
+        <nav class="nav flex-column">
+            <ul>
+                <a href="#" style="color: sandybrown; text-decoration: none;">Links</a>
+                <ul style="list-style: none; margin-left: -15%;">
+                    <li><u><a href="#">View Cart</a></u></li>
+                    <li><u><a href="#">Login/Register</a></u></li>
+                    <li><u><a href="#">Home</a></u></li>
+                </ul>
+            </ul>
+        </nav>
+        <nav class="nav flex-column">
+            <ul>
+                <a href="#" style="color: sandybrown; text-decoration: none;">Categories</a>
+                <ul style="list-style: none; margin-left: -15%;">
+                    <li><u><a href="#">Guitars</a></u></li>
+                    <li><u><a href="#">Basses</a></u></li>
+                    <li><u><a href="#">Drums</a></u></li>
+                </ul>
+            </ul>
+        </nav>
+        <nav class="nav flex-column">
+            <ul>
+                <a href="#" style="color: sandybrown; text-decoration: none;">Temp Link</a>
+                <ul style="list-style: none; margin-left: -15%;">
+                    <li><u><a href="#">Admin</a></u></li>
+                </ul>
+            </ul>
+        </nav>
+    </div>
+    <div class="col-9">
+        <div class="container">
+            <div class="row">
+                <div class="col-9">
+                    <h5>chúng tôi rất vui khi bạn đã đến thăm shop guitar. shop có bán có loại guitar khác nhau. rất
+                        thích hop cho việc giải trí.</h5>
+                    <div style="text-align: left; font-size: 30px; color: red;">Featured product</div>
+
+                    <div class="row" *ngFor='let a of guitars'>
+                        <div class="col-md-2" style="padding-top: 20px;">
+                            <img src="assets/images/{{a.imagesurl}}" alt="..." class="img-thumbnail" width="150"
+                                height="150">
+                        </div>
+                        <div class="col-md-9">
+
+                            <a href="#">
+                            </a>
+                            <a [routerLink]="['/detail',a.id]">
+                                <p><b>{{a.productname}}</b></p>
+                            </a>
+                            <p><b>Your price:{{a.price | number}}</b></p>
+                            <p>{{a.description}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

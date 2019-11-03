@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="yourcard">
+      <b>Your Cart</b><br>
+      To remove an item from your cart, change its quantity to 0.
+    </div>
+  
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col" style="text-align: left;">Item</th>
+          <th scope="col">Price</th>
+          <th scope="col">Quantity</th>
+          <th scope="col">Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor='let item of guitars' class="blockboder">
+          <td style="text-align: left; color:#007bff;">{{item.productname}}</td>
+          <td>{{item.price | number}} $</td>
+          <td> <button class="bunton" (click)="tang(item.idsoluong)" type="button" class="btn btn-success">+</button>
+            {{item.soluong}}
+            <button class="bunton" (click)="giam(item.idsoluong)" type="button" class="btn btn-danger">-</button></td>
+          <td><button (click)='xoa(guitars)'><i class="fa fa-trash"></i></button></td>
+        </tr>
+        <tr>
+          <td style="text-align: left;"></td>
+          <td></td>
+          <th scope="col">Subtotal</th>
+          <td>{{tong()|number}}<br>
+            <button style="border-radius: 5px; border-color:royalblue ;"  [routerLink]="['/yourorder']">Update Cart</button>
+        </tr>
+      </tbody>
+    </table>
+  
+    <div class="returnto">
+      <li>Return to: <a [routerLink]="['/']"><u>Home</u></a></li>
+      <li>Return to: <a [routerLink]="['/']"><u>Guitars</u></a></li>
+      <li>Proceed to: <a [routerLink]="['/yourorder']"><u>Checkout</u></a></li>
+    </div>
+  </div>
