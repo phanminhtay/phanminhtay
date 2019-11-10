@@ -1,0 +1,19 @@
+  .list-unstyled {
+    background: #00838f;
+    text-align: center;
+    font-size: 50px;
+    padding: 2%;
+    height: 150px;
+  }
+
+  .footer-copyright {
+    background-color: #006972;
+    color: #fffafb;
+    margin-top: -4%;
+  }
+  /* .page-footer{
+    margin-top: 7%;
+  } */
+  .dropdown-menu{
+    left: auto !important;
+  }

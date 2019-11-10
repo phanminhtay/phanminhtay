@@ -1,0 +1,11 @@
+tr td{
+    list-style: none;
+    padding: 10px;
+}
+tr td:hover{
+    background: rgb(33, 33, 54);
+    margin-right: 20%;
+}
+a{
+    text-decoration: none;
+}

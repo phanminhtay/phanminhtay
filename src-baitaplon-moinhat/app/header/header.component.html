@@ -1,0 +1,47 @@
+<div class="body">
+    <div class="row">
+        <div class="col-sm-8">
+            <section>
+                <div class="">
+                    <div class="row">
+                        <!-- de xuat các giá trị mon học ra -->
+                        <div class="col-md-6" style="padding-bottom: 15px"
+                            *ngFor='let a of Subjects |  paginate: { itemsPerPage: 4, currentPage: p }'>
+                            <div class="card">
+                                <div class="card-body">
+                                    <a [routerLink]="['/traloicauhoi',a.Id]"> <img class=""
+                                            src="assets/images/logos/{{a.Logo}}" class="mx-auto d-block"></a>
+                                </div>
+                                <div class="card-footer" style="text-align: center"
+                                    [routerLink]="['/traloicauhoi',a.Id]">
+                                    {{a.Name}}
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //ký hieu phan trang -->
+                        <div class="card-footer text-center">
+                            <pagination-controls (pageChange)="p = $event"></pagination-controls>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="col-sm-4">
+            <aside>
+                <div class="">
+                    <table class="table">
+                        <thead class="thead-light">
+                            <tr>
+                                <th style="font-size:20px;text-align: center;"><i class="far fa-address-card mr-2"></i>Danh Mục Môn Học</th>
+                            </tr>
+                            <tr *ngFor="let a of Subjects">
+                                <th> <a [routerLink]="['/traloicauhoi',a.Id]">{{a.Name}}</a></th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </aside>
+        </div>
+    </div>
+</div>
